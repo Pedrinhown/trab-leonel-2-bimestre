@@ -10,42 +10,39 @@ using System.Windows.Forms;
 
 namespace Trabalho2Bim
 {
-    public partial class Form1 : Form
-    {
-        public Form1()
-        {
+    public partial class Form1 : Form {
+        NF nf = new NF();
+        arquivo arquivo = new arquivo();
+
+        public Form1() {
             InitializeComponent();
         }
 
-        private void btnGravar_Click(object sender, EventArgs e)
-        {
-            NF nf = new NF();
+        private void btnGravar_Click(object sender, EventArgs e) {
 
             nf.nomeProd = txtNomeProd.Text;
             nf.numNf = Convert.ToInt32(txtNumNota.Text);
             nf.precoUnit = Convert.ToDouble(txtPreco.Text);
             nf.qntVendida = Convert.ToInt32(txtQuantidade.Text);
             nf.cliente = txtCliente.Text;
-            nf.vendedor = txtVendedor.Text;
+            nf.vendedor = cbxVendedor.Text;
             nf.regiao = cbxRegiao.Text;
             nf.totalItem += nf.precoUnit;
             nf.fornecedor = txtFornecedor.Text;
 
-            nf.salvarlist();
+
+            arquivo.listageral.Add(nf);
         }
 
-        private void btnListar_Click(object sender, EventArgs e)
-        {
-            NF nf = new NF();
+        private void btnListar_Click(object sender, EventArgs e) {
             dgNf.DataSource = null;
-            dgNf.DataSource = nf.lista();
+            dgNf.DataSource = arquivo.listageral.OrderBy(x => x.numNf).ToList();
         }
 
-        private void btnVendasTot_Click(object sender, EventArgs e)
-        {
+        private void btnVendasTot_Click(object sender, EventArgs e) {
             printVendedor pVend = new printVendedor();
-            pVend.Show();
             this.Hide();
+            pVend.Show();
         }
     }
 }
