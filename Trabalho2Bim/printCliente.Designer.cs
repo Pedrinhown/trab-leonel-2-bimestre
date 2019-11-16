@@ -1,6 +1,6 @@
 ﻿namespace Trabalho2Bim
 {
-    partial class printVendedor
+    partial class printCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,47 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvVendedor = new System.Windows.Forms.DataGridView();
+            this.dgvCliente = new System.Windows.Forms.DataGridView();
             this.btnVoltar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVendedor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvVendedor
+            // dgvCliente
             // 
-            this.dgvVendedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVendedor.Location = new System.Drawing.Point(12, 12);
-            this.dgvVendedor.Name = "dgvVendedor";
-            this.dgvVendedor.ReadOnly = true;
-            this.dgvVendedor.Size = new System.Drawing.Size(243, 426);
-            this.dgvVendedor.TabIndex = 0;
+            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCliente.Location = new System.Drawing.Point(12, 12);
+            this.dgvCliente.Name = "dgvCliente";
+            this.dgvCliente.ReadOnly = true;
+            this.dgvCliente.Size = new System.Drawing.Size(240, 411);
+            this.dgvCliente.TabIndex = 0;
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(406, 392);
+            this.btnVoltar.Location = new System.Drawing.Point(463, 377);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(95, 46);
-            this.btnVoltar.TabIndex = 1;
+            this.btnVoltar.TabIndex = 2;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // printVendedor
+            // printCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(513, 450);
+            this.ClientSize = new System.Drawing.Size(570, 450);
             this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.dgvVendedor);
-            this.Name = "printVendedor";
-            this.Text = "printVendedor";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVendedor)).EndInit();
+            this.Controls.Add(this.dgvCliente);
+            this.Name = "printCliente";
+            this.Text = "printCliente";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvVendedor;
+        private System.Windows.Forms.DataGridView dgvCliente;
         private System.Windows.Forms.Button btnVoltar;
     }
 }

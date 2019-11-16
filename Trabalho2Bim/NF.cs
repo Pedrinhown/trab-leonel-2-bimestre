@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Trabalho2Bim {
-    class NF {
+namespace Trabalho2Bim
+{
+    public class NF
+    {
         public int numNf { get; set; }
         public string nomeProd { get; set; }
         public int qntVendida { get; set; }

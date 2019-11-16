@@ -10,64 +10,99 @@ using System.Windows.Forms;
 
 namespace Trabalho2Bim
 {
+
     public partial class printVendedor : Form
     {
+        List<Vendedor> listaVendedores = new List<Vendedor>();
+        Vendedor vendedor = new Vendedor();
         arquivo Arquivo = new arquivo();
+
         public printVendedor()
         {
             InitializeComponent();
-            preencher();
         }
 
-        public void preencher()
+        public void preencher(List<NF> qualquerbosta)
         {
-            List<Vendedor> listaVendedores = new List<Vendedor>();
             double totalAmericanas = 0, totalColombo = 0, totalCasas_Bahias = 0, totalCondor = 0, totalCarrefour = 0, totalHavan = 0, totalExtra = 0, totalAliExpress = 0, totalAmazon = 0;
 
-            for (int i = 0; i < Arquivo.listachamar().Count; i++)
+            for (int i = 0; i < qualquerbosta.Count; i++)
             {
-                if (Arquivo.listachamar()[i].vendedor == "Americanas")
+                if (qualquerbosta[i].vendedor == "Americanas")
                 {
-                    totalAmericanas = totalAmericanas + (Arquivo.listachamar()[i].qntVendida * Arquivo.listachamar()[i].precoUnit);
+                    totalAmericanas = totalAmericanas + (qualquerbosta[i].qntVendida * qualquerbosta[i].precoUnit);
                 }
-                else if (Arquivo.listachamar()[i].vendedor == "Colombo")
+                else if (qualquerbosta[i].vendedor == "Colombo")
                 {
-                    totalColombo = totalColombo + (Arquivo.listachamar()[i].qntVendida * Arquivo.listachamar()[i].precoUnit);
+                    totalColombo = totalColombo + (qualquerbosta[i].qntVendida * qualquerbosta[i].precoUnit);
                 }
-                else if (Arquivo.listachamar()[i].vendedor == "Casas Bahias")
+                else if (qualquerbosta[i].vendedor == "Casas Bahias")
                 {
-                    totalCasas_Bahias = totalCasas_Bahias + (Arquivo.listachamar()[i].qntVendida * Arquivo.listachamar()[i].precoUnit);
+                    totalCasas_Bahias = totalCasas_Bahias + (qualquerbosta[i].qntVendida * qualquerbosta[i].precoUnit);
                 }
-                else if (Arquivo.listachamar()[i].vendedor == "Condor")
+                else if (qualquerbosta[i].vendedor == "Condor")
                 {
-                    totalCondor = totalCondor + (Arquivo.listachamar()[i].qntVendida * Arquivo.listachamar()[i].precoUnit);
+                    totalCondor = totalCondor + (qualquerbosta[i].qntVendida * qualquerbosta[i].precoUnit);
                 }
-                else if (Arquivo.listachamar()[i].vendedor == "Carrefour")
+                else if (qualquerbosta[i].vendedor == "Carrefour")
                 {
-                    totalCarrefour = totalCarrefour + (Arquivo.listachamar()[i].qntVendida * Arquivo.listachamar()[i].precoUnit);
+                    totalCarrefour = totalCarrefour + (qualquerbosta[i].qntVendida * qualquerbosta[i].precoUnit);
                 }
-                else if (Arquivo.listachamar()[i].vendedor == "Havan")
+                else if (qualquerbosta[i].vendedor == "Havan")
                 {
-                    totalHavan = totalHavan + (Arquivo.listachamar()[i].qntVendida * Arquivo.listachamar()[i].precoUnit);
+                    totalHavan = totalHavan + (qualquerbosta[i].qntVendida * qualquerbosta[i].precoUnit);
                 }
-                else if (Arquivo.listachamar()[i].vendedor == "Extra")
+                else if (qualquerbosta[i].vendedor == "Extra")
                 {
-                    totalExtra = totalExtra + (Arquivo.listachamar()[i].qntVendida * Arquivo.listachamar()[i].precoUnit);
+                    totalExtra = totalExtra + (qualquerbosta[i].qntVendida * qualquerbosta[i].precoUnit);
                 }
-                else if (Arquivo.listachamar()[i].vendedor == "AliExpress")
+                else if (qualquerbosta[i].vendedor == "AliExpress")
                 {
-                    totalAliExpress = totalAliExpress + (Arquivo.listachamar()[i].qntVendida * Arquivo.listachamar()[i].precoUnit);
+                    totalAliExpress = totalAliExpress + (qualquerbosta[i].qntVendida * qualquerbosta[i].precoUnit);
                 }
-                else if (Arquivo.listachamar()[i].vendedor == "Amazon")
+                else if (qualquerbosta[i].vendedor == "Amazon")
                 {
-                    totalAmazon = totalAmazon + (Arquivo.listachamar()[i].qntVendida * Arquivo.listachamar()[i].precoUnit);
+                    totalAmazon = totalAmazon + (qualquerbosta[i].qntVendida * qualquerbosta[i].precoUnit);
                 }
             }
 
-            dgvVendedor.Rows[0].Cells[0].Value = "Americanas";
-            dgvVendedor.Rows[0].Cells[1].Value = totalAmericanas;
-            dgvVendedor.Rows[1].Cells[0].Value = "Colombo";
-            dgvVendedor.Rows[1].Cells[1].Value = totalColombo;
+            povoarvend("Americanas", totalAmericanas);
+            //listaVendedores.Add(vendedor);
+            povoarvend("Colombo", totalColombo);
+            //listaVendedores.Add(vendedor);
+            povoarvend("Casas Bahias", totalCasas_Bahias);
+            //listaVendedores.Add(vendedor);
+            povoarvend("Condor", totalCondor);
+            //listaVendedores.Add(vendedor);
+            povoarvend("Carrefour", totalCarrefour);
+            //listaVendedores.Add(vendedor);
+            povoarvend("Havan", totalHavan);
+            //listaVendedores.Add(vendedor);
+            povoarvend("Extra", totalExtra);
+            //listaVendedores.Add(vendedor);
+            povoarvend("AliExpress", totalAliExpress);
+            //listaVendedores.Add(vendedor);
+            povoarvend("Amazon", totalAmazon);
+            //listaVendedores.Add(vendedor);
+
+            dgvVendedor.DataSource = null;
+            dgvVendedor.DataSource = listaVendedores;
+        }
+
+        public void povoarvend(string vendedores, double totalvend)
+        {
+            Vendedor vendedor = new Vendedor();
+            vendedor.vendedor = vendedores;
+            vendedor.Total_Vendas = totalvend;
+            listaVendedores.Add(vendedor);
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Form1 inicio = new Form1();
+            inicio.Show();
+            this.Hide();
+            dgvVendedor.ReadOnly = true;
         }
     }
 }

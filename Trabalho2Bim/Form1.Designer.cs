@@ -32,8 +32,6 @@
             this.txtNomeProd = new System.Windows.Forms.TextBox();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.txtPreco = new System.Windows.Forms.TextBox();
-            this.txtCliente = new System.Windows.Forms.TextBox();
-            this.txtFornecedor = new System.Windows.Forms.TextBox();
             this.btnGravar = new System.Windows.Forms.Button();
             this.dgNf = new System.Windows.Forms.DataGridView();
             this.btnListar = new System.Windows.Forms.Button();
@@ -48,6 +46,9 @@
             this.cbxRegiao = new System.Windows.Forms.ComboBox();
             this.btnVendasTot = new System.Windows.Forms.Button();
             this.cbxVendedor = new System.Windows.Forms.ComboBox();
+            this.cbxCliente = new System.Windows.Forms.ComboBox();
+            this.cbxFornecedor = new System.Windows.Forms.ComboBox();
+            this.btnCliente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgNf)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,20 +80,6 @@
             this.txtPreco.Size = new System.Drawing.Size(100, 20);
             this.txtPreco.TabIndex = 3;
             // 
-            // txtCliente
-            // 
-            this.txtCliente.Location = new System.Drawing.Point(272, 90);
-            this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(100, 20);
-            this.txtCliente.TabIndex = 7;
-            // 
-            // txtFornecedor
-            // 
-            this.txtFornecedor.Location = new System.Drawing.Point(272, 137);
-            this.txtFornecedor.Name = "txtFornecedor";
-            this.txtFornecedor.Size = new System.Drawing.Size(100, 20);
-            this.txtFornecedor.TabIndex = 8;
-            // 
             // btnGravar
             // 
             this.btnGravar.Location = new System.Drawing.Point(272, 218);
@@ -108,6 +95,7 @@
             this.dgNf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgNf.Location = new System.Drawing.Point(81, 248);
             this.dgNf.Name = "dgNf";
+            this.dgNf.ReadOnly = true;
             this.dgNf.RowHeadersWidth = 51;
             this.dgNf.Size = new System.Drawing.Size(690, 171);
             this.dgNf.TabIndex = 10;
@@ -236,11 +224,48 @@
             this.cbxVendedor.Size = new System.Drawing.Size(100, 21);
             this.cbxVendedor.TabIndex = 26;
             // 
+            // cbxCliente
+            // 
+            this.cbxCliente.FormattingEnabled = true;
+            this.cbxCliente.Items.AddRange(new object[] {
+            "MiniMercado Pedrão",
+            "Mercadinho do Vitu",
+            "Mercado do Pedrinho"});
+            this.cbxCliente.Location = new System.Drawing.Point(272, 91);
+            this.cbxCliente.Name = "cbxCliente";
+            this.cbxCliente.Size = new System.Drawing.Size(100, 21);
+            this.cbxCliente.TabIndex = 27;
+            // 
+            // cbxFornecedor
+            // 
+            this.cbxFornecedor.FormattingEnabled = true;
+            this.cbxFornecedor.Items.AddRange(new object[] {
+            "01 - Pedrão Transportes",
+            "02 - Pedrinho Fretes",
+            "03 - Vitau Fretes"});
+            this.cbxFornecedor.Location = new System.Drawing.Point(272, 137);
+            this.cbxFornecedor.Name = "cbxFornecedor";
+            this.cbxFornecedor.Size = new System.Drawing.Size(100, 21);
+            this.cbxFornecedor.TabIndex = 28;
+            // 
+            // btnCliente
+            // 
+            this.btnCliente.Location = new System.Drawing.Point(420, 97);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(89, 37);
+            this.btnCliente.TabIndex = 29;
+            this.btnCliente.Text = "Compras por Cliente";
+            this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCliente);
+            this.Controls.Add(this.cbxFornecedor);
+            this.Controls.Add(this.cbxCliente);
             this.Controls.Add(this.cbxVendedor);
             this.Controls.Add(this.btnVendasTot);
             this.Controls.Add(this.cbxRegiao);
@@ -255,8 +280,6 @@
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.dgNf);
             this.Controls.Add(this.btnGravar);
-            this.Controls.Add(this.txtFornecedor);
-            this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.txtPreco);
             this.Controls.Add(this.txtQuantidade);
             this.Controls.Add(this.txtNomeProd);
@@ -275,8 +298,6 @@
         private System.Windows.Forms.TextBox txtNomeProd;
         private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.TextBox txtPreco;
-        private System.Windows.Forms.TextBox txtCliente;
-        private System.Windows.Forms.TextBox txtFornecedor;
         private System.Windows.Forms.Button btnGravar;
         private System.Windows.Forms.DataGridView dgNf;
         private System.Windows.Forms.Button btnListar;
@@ -291,6 +312,9 @@
         private System.Windows.Forms.ComboBox cbxRegiao;
         private System.Windows.Forms.Button btnVendasTot;
         private System.Windows.Forms.ComboBox cbxVendedor;
+        private System.Windows.Forms.ComboBox cbxCliente;
+        private System.Windows.Forms.ComboBox cbxFornecedor;
+        private System.Windows.Forms.Button btnCliente;
     }
 }
 

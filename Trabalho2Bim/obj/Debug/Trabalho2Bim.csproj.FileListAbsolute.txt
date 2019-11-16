@@ -29,3 +29,4 @@ C:\Users\andre\Desktop\leonel\trab-leonel-2-bimestre\Trabalho2Bim\obj\Debug\Trab
 C:\Users\andre\Desktop\leonel\trab-leonel-2-bimestre\Trabalho2Bim\obj\Debug\Trabalho2Bim.csproj.GenerateResource.cache
 C:\Users\andre\Desktop\leonel\trab-leonel-2-bimestre\Trabalho2Bim\obj\Debug\Trabalho2Bim.exe
 C:\Users\andre\Desktop\leonel\trab-leonel-2-bimestre\Trabalho2Bim\obj\Debug\Trabalho2Bim.pdb
+C:\Users\andre\Desktop\leonel\trab-leonel-2-bimestre\Trabalho2Bim\obj\Debug\Trabalho2Bim.printCliente.resources

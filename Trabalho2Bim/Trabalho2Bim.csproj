@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="arquivo.cs" />
+    <Compile Include="Cliente.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +55,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="NF.cs" />
+    <Compile Include="printCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="printCliente.Designer.cs">
+      <DependentUpon>printCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="printVendedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +72,9 @@
     <Compile Include="Vendedor.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="printCliente.resx">
+      <DependentUpon>printCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="printVendedor.resx">
       <DependentUpon>printVendedor.cs</DependentUpon>
