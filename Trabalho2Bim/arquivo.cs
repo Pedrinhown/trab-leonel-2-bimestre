@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace Trabalho2Bim {
     class arquivo {
-        public List<NF> listageral = new List<NF>();
+        
+        List<NF> listageral = new List<NF>();
+
+        
+        public void salvarlista(NF nf)
+        {
+            listageral.Add(nf);
+        }
+
+        public List<NF> listachamar()
+        {
+            return listageral;
+        }
 
         //public void SalvarFuncionario(List<Funcionario> listaFuncionario) {
 

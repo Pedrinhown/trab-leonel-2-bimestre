@@ -29,16 +29,31 @@
         private void InitializeComponent()
         {
             this.dgvVendedor = new System.Windows.Forms.DataGridView();
+            this.ColumVendedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumTotalVendedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendedor)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvVendedor
             // 
             this.dgvVendedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVendedor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumVendedor,
+            this.ColumTotalVendedor});
             this.dgvVendedor.Location = new System.Drawing.Point(12, 12);
             this.dgvVendedor.Name = "dgvVendedor";
             this.dgvVendedor.Size = new System.Drawing.Size(294, 426);
             this.dgvVendedor.TabIndex = 0;
+            // 
+            // ColumVendedor
+            // 
+            this.ColumVendedor.HeaderText = "Vendedor";
+            this.ColumVendedor.Name = "ColumVendedor";
+            // 
+            // ColumTotalVendedor
+            // 
+            this.ColumTotalVendedor.HeaderText = "Total de vendas";
+            this.ColumTotalVendedor.Name = "ColumTotalVendedor";
             // 
             // printVendedor
             // 
@@ -56,5 +71,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvVendedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumVendedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumTotalVendedor;
     }
 }

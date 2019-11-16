@@ -11,38 +11,46 @@ using System.Windows.Forms;
 namespace Trabalho2Bim
 {
     public partial class Form1 : Form {
-        NF nf = new NF();
         arquivo arquivo = new arquivo();
 
         public Form1() {
             InitializeComponent();
         }
 
-        private void btnGravar_Click(object sender, EventArgs e) {
-
-            nf.nomeProd = txtNomeProd.Text;
-            nf.numNf = Convert.ToInt32(txtNumNota.Text);
-            nf.precoUnit = Convert.ToDouble(txtPreco.Text);
-            nf.qntVendida = Convert.ToInt32(txtQuantidade.Text);
-            nf.cliente = txtCliente.Text;
-            nf.vendedor = cbxVendedor.Text;
-            nf.regiao = cbxRegiao.Text;
-            nf.totalItem += nf.precoUnit;
-            nf.fornecedor = txtFornecedor.Text;
-
-
-            arquivo.listageral.Add(nf);
-        }
-
-        private void btnListar_Click(object sender, EventArgs e) {
+        private void btnListar_Click(object sender, EventArgs e)
+        {
             dgNf.DataSource = null;
-            dgNf.DataSource = arquivo.listageral.OrderBy(x => x.numNf).ToList();
+            dgNf.DataSource = arquivo.listachamar().OrderBy(x => x.numNf).ToList();
         }
 
-        private void btnVendasTot_Click(object sender, EventArgs e) {
+        private void btnVendasTot_Click(object sender, EventArgs e)
+        {
             printVendedor pVend = new printVendedor();
             this.Hide();
             pVend.Show();
+        }
+
+        private void btnGravar_Click(object sender, EventArgs e) {
+            NF nf = new NF();
+
+            //preencher(txtNomeProd.Text, txtCliente.Text, cbxVendedor.Text, cbxRegiao.Text, txtFornecedor.Text, Convert.ToInt32(txtNumNota.Text), Convert.ToInt32(txtQuantidade.Text), Convert.ToDouble(txtPreco.Text));
+
+            arquivo.salvarlista(preencher(txtNomeProd.Text, txtCliente.Text, cbxVendedor.Text, cbxRegiao.Text, txtFornecedor.Text, Convert.ToInt32(txtNumNota.Text), Convert.ToInt32(txtQuantidade.Text), Convert.ToDouble(txtPreco.Text)));
+        }
+
+        private NF preencher(string nomeprod, string cliente, string vendedor, string regiao, string fornecedor, int numNF, int quantVendida, double precoUnit)
+        {
+            NF nff = new NF();
+
+            nff.nomeProd = nomeprod;
+            nff.numNf = numNF;
+            nff.precoUnit = precoUnit;
+            nff.qntVendida = quantVendida;
+            nff.cliente = cliente;
+            nff.vendedor = vendedor;
+            nff.regiao = regiao;
+            nff.fornecedor = fornecedor;
+            return nff;
         }
     }
 }
