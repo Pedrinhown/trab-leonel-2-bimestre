@@ -8,7 +8,10 @@ namespace Trabalho2Bim
 {
     public class Fornecedores
     {
-        public string fornecedor{ get; set; }
-        public double totalVenda { get; set; }
+        private string fornecedor{ get; set; }
+        private double totalVenda { get; set; }
+
+        public string fornecedorS { get { return fornecedor; } set { fornecedor = value; } }
+        public double totalVendaS { get { return totalVenda; } set { totalVenda = value; } }
     }
 }

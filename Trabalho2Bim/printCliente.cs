@@ -30,17 +30,17 @@ namespace Trabalho2Bim
 
             for (int i = 0; i < qualquerbosta.Count; i++)
             {
-                if (qualquerbosta[i].cliente == "MiniMercado Pedrão")
+                if (qualquerbosta[i].clienteS == "MiniMercado Pedrão")
                 {
-                    miniMercadoPedrao = miniMercadoPedrao + (qualquerbosta[i].qntVendida * qualquerbosta[i].precoUnit);
+                    miniMercadoPedrao = miniMercadoPedrao + (qualquerbosta[i].qntVendidaS * qualquerbosta[i].precoUnitS);
                 }
-                else if (qualquerbosta[i].cliente == "Mercadinho do Vitu")
+                else if (qualquerbosta[i].clienteS == "Mercadinho do Vitu")
                 {
-                    mercadinhoDoVitu = mercadinhoDoVitu + (qualquerbosta[i].qntVendida * qualquerbosta[i].precoUnit);
+                    mercadinhoDoVitu = mercadinhoDoVitu + (qualquerbosta[i].qntVendidaS * qualquerbosta[i].precoUnitS);
                 }
-                else if (qualquerbosta[i].cliente == "Mercado do Pedrinho")
+                else if (qualquerbosta[i].clienteS == "Mercado do Pedrinho")
                 {
-                    mercadoDoPedrinho = mercadoDoPedrinho + (qualquerbosta[i].qntVendida * qualquerbosta[i].precoUnit);
+                    mercadoDoPedrinho = mercadoDoPedrinho + (qualquerbosta[i].qntVendidaS * qualquerbosta[i].precoUnitS);
                 }
             }
 
@@ -58,8 +58,8 @@ namespace Trabalho2Bim
         public void povoarvend(string clientes, double totalvend)
         {
             Cliente cliente = new Cliente();
-            cliente.cliente = clientes;
-            cliente.comprasCliente = totalvend;
+            cliente.clienteS = clientes;
+            cliente.comprasClienteS = totalvend;
             listaClientes.Add(cliente);
         }
 

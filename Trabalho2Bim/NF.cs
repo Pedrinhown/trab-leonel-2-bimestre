@@ -8,14 +8,25 @@ namespace Trabalho2Bim
 {
     public class NF
     {
-        public int numNf { get; set; }
-        public string nomeProd { get; set; }
-        public int qntVendida { get; set; }
-        public double precoUnit { get; set; }
-        public double totalItem { get; set; }
-        public string vendedor { get; set; }
-        public string cliente { get; set; }
-        public string fornecedor { get; set; }
-        public string regiao { get; set; }
+        private int numNf { get; set; }
+        private string nomeProd { get; set; }
+        private int qntVendida { get; set; }
+        private double precoUnit { get; set; }
+        private double totalItem { get; set; }
+        private string vendedor { get; set; }
+        private string cliente { get; set; }
+        private string fornecedor { get; set; }
+        private string regiao { get; set; }
+
+        public int numNfS { get { return numNf; } set { numNf = value; } }
+        public string nomeProdS { get { return nomeProd; } set { nomeProd = value; } }
+        public int qntVendidaS { get { return qntVendida; } set { qntVendida = value; } }
+        public double precoUnitS { get { return precoUnit; } set { precoUnit = value; } }
+        public double  totalItemS { get { return totalItem; } set { totalItem = value; } }
+        public string vendedorS { get { return vendedor; } set { vendedor = value; } }
+        public string clienteS { get { return cliente; } set { cliente = value; } }
+        public string fornecedorS { get { return fornecedor; } set { fornecedor = value; } }
+        public string regiaoS { get { return regiao; } set { regiao = value; } }
+
     }
 }

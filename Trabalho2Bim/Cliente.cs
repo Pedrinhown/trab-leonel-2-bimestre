@@ -8,8 +8,11 @@ namespace Trabalho2Bim
 {
     class Cliente
     {
-        public string cliente { get; set; }
+        private string cliente { get; set; }
 
-        public double comprasCliente { get; set; }
+        private double comprasCliente { get; set; }
+
+        public string clienteS { get { return cliente; } set { cliente = value; } }
+        public double comprasClienteS { get { return comprasCliente; } set {comprasCliente = value; } }
     }
 }

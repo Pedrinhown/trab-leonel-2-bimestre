@@ -22,7 +22,7 @@ namespace Trabalho2Bim
         private void btnListar_Click(object sender, EventArgs e)
         {
             dgNf.DataSource = null;
-            dgNf.DataSource = arquivo.listachamar().OrderBy(x => x.numNf).ToList();
+            dgNf.DataSource = arquivo.listachamar().OrderBy(x => x.numNfS).ToList();
             dgNf.ReadOnly = true;
         }
 
@@ -43,15 +43,15 @@ namespace Trabalho2Bim
         {
             NF nff = new NF();
 
-            nff.nomeProd = nomeprod;
-            nff.numNf = numNF;
-            nff.precoUnit = precoUnit;
-            nff.qntVendida = quantVendida;
-            nff.cliente = cliente;
-            nff.vendedor = vendedor;
-            nff.regiao = regiao;
-            nff.fornecedor = fornecedor;
-            nff.totalItem = quantVendida * precoUnit;
+            nff.nomeProdS = nomeprod;
+            nff.numNfS = numNF;
+            nff.precoUnitS = precoUnit;
+            nff.qntVendidaS = quantVendida;
+            nff.clienteS = cliente;
+            nff.vendedorS = vendedor;
+            nff.regiaoS = regiao;
+            nff.fornecedorS = fornecedor;
+            nff.totalItemS = quantVendida * precoUnit;
             return nff;
         }
 
@@ -68,8 +68,8 @@ namespace Trabalho2Bim
         public void FornecedorVenda(string fornecedor, double vendaTotal)
         {
             Fornecedores forn = new Fornecedores();
-            forn.fornecedor = fornecedor;
-            forn.totalVenda = vendaTotal;
+            forn.fornecedorS = fornecedor;
+            forn.totalVendaS = vendaTotal;
             listFornecedor.Add(forn);
         }
 
@@ -79,17 +79,17 @@ namespace Trabalho2Bim
 
             for (int i = 0; i < qualquerbosta.Count; i++)
             {
-                if (qualquerbosta[i].fornecedor == "01 - Pedrão Transportes")
+                if (qualquerbosta[i].fornecedorS == "01 - Pedrão Transportes")
                 {
-                    totalPedrao += (qualquerbosta[i].qntVendida * qualquerbosta[i].precoUnit);
+                    totalPedrao += (qualquerbosta[i].qntVendidaS * qualquerbosta[i].precoUnitS);
                 }
-                else if (qualquerbosta[i].fornecedor == "02 - Pedrinho Fretes")
+                else if (qualquerbosta[i].fornecedorS == "02 - Pedrinho Fretes")
                 {
-                    totalPedrin += (qualquerbosta[i].qntVendida * qualquerbosta[i].precoUnit);
+                    totalPedrin += (qualquerbosta[i].qntVendidaS * qualquerbosta[i].precoUnitS);
                 }
-                else if (qualquerbosta[i].fornecedor == "03 - Vitau Fretes")
+                else if (qualquerbosta[i].fornecedorS == "03 - Vitau Fretes")
                 {
-                    totalVitau += (qualquerbosta[i].qntVendida * qualquerbosta[i].precoUnit);
+                    totalVitau += (qualquerbosta[i].qntVendidaS * qualquerbosta[i].precoUnitS);
                 }
             }
 
@@ -108,11 +108,11 @@ namespace Trabalho2Bim
 
         public void Regiao(List<NF> list)
         {
-            double norte = list.FindAll(x => x.regiao.Contains("Norte")).Sum(x => x.totalItem);
-            double sul = list.FindAll(x => x.regiao.Contains("Sul")).Sum(x => x.totalItem);
-            double sudeste = list.FindAll(x => x.regiao.Contains("Sudeste")).Sum(x => x.totalItem);
-            double nordeste = list.FindAll(x => x.regiao.Contains("Nordeste")).Sum(x => x.totalItem);
-            double centrooeste = list.FindAll(x => x.regiao.Contains("Centro Oeste")).Sum(x => x.totalItem);
+            double norte = list.FindAll(x => x.regiaoS.Contains("Norte")).Sum(x => x.totalItemS);
+            double sul = list.FindAll(x => x.regiaoS.Contains("Sul")).Sum(x => x.totalItemS);
+            double sudeste = list.FindAll(x => x.regiaoS.Contains("Sudeste")).Sum(x => x.totalItemS);
+            double nordeste = list.FindAll(x => x.regiaoS.Contains("Nordeste")).Sum(x => x.totalItemS);
+            double centrooeste = list.FindAll(x => x.regiaoS.Contains("Centro Oeste")).Sum(x => x.totalItemS);
 
             if (norte > sul && norte > sudeste && norte > nordeste && norte > centrooeste)
             {

@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Trabalho2Bim {
     class Vendedor {
-        public string vendedor { get; set; }
-        public double Total_Vendas { get; set; }
+        private string vendedor { get; set; }
+        private double Total_Vendas { get; set; }
+
+        public string vendedorS { get { return vendedor; } set { vendedor = value; } }
+        public double total_vendas {get { return Total_Vendas; } set { Total_Vendas = value; } }
     }
 }

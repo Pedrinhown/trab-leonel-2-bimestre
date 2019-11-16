@@ -14,7 +14,7 @@ namespace Trabalho2Bim
     public partial class printVendedor : Form
     {
         List<Vendedor> listaVendedores = new List<Vendedor>();
-        Vendedor vendedor = new Vendedor();
+        Vendedor vendedorS = new Vendedor();
         arquivo Arquivo = new arquivo();
 
         public printVendedor()
@@ -28,41 +28,41 @@ namespace Trabalho2Bim
 
             for (int i = 0; i < qualquerbosta.Count; i++)
             {
-                if (qualquerbosta[i].vendedor == "Americanas")
+                if (qualquerbosta[i].vendedorS == "Americanas")
                 {
-                    totalAmericanas = totalAmericanas + (qualquerbosta[i].qntVendida * qualquerbosta[i].precoUnit);
+                    totalAmericanas = totalAmericanas + (qualquerbosta[i].qntVendidaS * qualquerbosta[i].precoUnitS);
                 }
-                else if (qualquerbosta[i].vendedor == "Colombo")
+                else if (qualquerbosta[i].vendedorS == "Colombo")
                 {
-                    totalColombo = totalColombo + (qualquerbosta[i].qntVendida * qualquerbosta[i].precoUnit);
+                    totalColombo = totalColombo + (qualquerbosta[i].qntVendidaS * qualquerbosta[i].precoUnitS);
                 }
-                else if (qualquerbosta[i].vendedor == "Casas Bahias")
+                else if (qualquerbosta[i].vendedorS == "Casas Bahias")
                 {
-                    totalCasas_Bahias = totalCasas_Bahias + (qualquerbosta[i].qntVendida * qualquerbosta[i].precoUnit);
+                    totalCasas_Bahias = totalCasas_Bahias + (qualquerbosta[i].qntVendidaS * qualquerbosta[i].precoUnitS);
                 }
-                else if (qualquerbosta[i].vendedor == "Condor")
+                else if (qualquerbosta[i].vendedorS == "Condor")
                 {
-                    totalCondor = totalCondor + (qualquerbosta[i].qntVendida * qualquerbosta[i].precoUnit);
+                    totalCondor = totalCondor + (qualquerbosta[i].qntVendidaS * qualquerbosta[i].precoUnitS);
                 }
-                else if (qualquerbosta[i].vendedor == "Carrefour")
+                else if (qualquerbosta[i].vendedorS == "Carrefour")
                 {
-                    totalCarrefour = totalCarrefour + (qualquerbosta[i].qntVendida * qualquerbosta[i].precoUnit);
+                    totalCarrefour = totalCarrefour + (qualquerbosta[i].qntVendidaS * qualquerbosta[i].precoUnitS);
                 }
-                else if (qualquerbosta[i].vendedor == "Havan")
+                else if (qualquerbosta[i].vendedorS == "Havan")
                 {
-                    totalHavan = totalHavan + (qualquerbosta[i].qntVendida * qualquerbosta[i].precoUnit);
+                    totalHavan = totalHavan + (qualquerbosta[i].qntVendidaS * qualquerbosta[i].precoUnitS);
                 }
-                else if (qualquerbosta[i].vendedor == "Extra")
+                else if (qualquerbosta[i].vendedorS == "Extra")
                 {
-                    totalExtra = totalExtra + (qualquerbosta[i].qntVendida * qualquerbosta[i].precoUnit);
+                    totalExtra = totalExtra + (qualquerbosta[i].qntVendidaS * qualquerbosta[i].precoUnitS);
                 }
-                else if (qualquerbosta[i].vendedor == "AliExpress")
+                else if (qualquerbosta[i].vendedorS == "AliExpress")
                 {
-                    totalAliExpress = totalAliExpress + (qualquerbosta[i].qntVendida * qualquerbosta[i].precoUnit);
+                    totalAliExpress = totalAliExpress + (qualquerbosta[i].qntVendidaS * qualquerbosta[i].precoUnitS);
                 }
-                else if (qualquerbosta[i].vendedor == "Amazon")
+                else if (qualquerbosta[i].vendedorS == "Amazon")
                 {
-                    totalAmazon = totalAmazon + (qualquerbosta[i].qntVendida * qualquerbosta[i].precoUnit);
+                    totalAmazon = totalAmazon + (qualquerbosta[i].qntVendidaS * qualquerbosta[i].precoUnitS);
                 }
             }
 
@@ -92,8 +92,8 @@ namespace Trabalho2Bim
         public void povoarvend(string vendedores, double totalvend)
         {
             Vendedor vendedor = new Vendedor();
-            vendedor.vendedor = vendedores;
-            vendedor.Total_Vendas = totalvend;
+            vendedorS.vendedorS = vendedores;
+            vendedorS.total_vendas = totalvend;
             listaVendedores.Add(vendedor);
         }
 
