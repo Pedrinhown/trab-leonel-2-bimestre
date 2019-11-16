@@ -60,6 +60,8 @@
     <Compile Include="Fornecedores.cs" />
     <Compile Include="jSon.cs" />
     <Compile Include="NF.cs" />
+    <Compile Include="preencherControl.cs" />
+    <Compile Include="preencherModel.cs" />
     <Compile Include="printCliente.cs">
       <SubType>Form</SubType>
     </Compile>

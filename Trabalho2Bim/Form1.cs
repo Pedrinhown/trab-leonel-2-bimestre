@@ -12,6 +12,8 @@ namespace Trabalho2Bim
 {
     public partial class Form1 : Form
     {
+
+
         arquivo arquivo = new arquivo();
 
         public Form1()
@@ -36,24 +38,11 @@ namespace Trabalho2Bim
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            arquivo.salvarlista(preencher(txtNomeProd.Text, cbxCliente.Text, cbxVendedor.Text, cbxRegiao.Text, cbxFornecedor.Text, Convert.ToInt32(txtNumNota.Text), Convert.ToInt32(txtQuantidade.Text), Convert.ToDouble(txtPreco.Text)));
+            preencherControl outraBosta = new preencherControl();
+            arquivo.salvarlista(outraBosta.preencherControle(txtNomeProd.Text, cbxCliente.Text, cbxVendedor.Text, cbxRegiao.Text, cbxFornecedor.Text, Convert.ToInt32(txtNumNota.Text), Convert.ToInt32(txtQuantidade.Text), Convert.ToDouble(txtPreco.Text)));
         }
 
-        private NF preencher(string nomeprod, string cliente, string vendedor, string regiao, string fornecedor, int numNF, int quantVendida, double precoUnit)
-        {
-            NF nff = new NF();
 
-            nff.nomeProdS = nomeprod;
-            nff.numNfS = numNF;
-            nff.precoUnitS = precoUnit;
-            nff.qntVendidaS = quantVendida;
-            nff.clienteS = cliente;
-            nff.vendedorS = vendedor;
-            nff.regiaoS = regiao;
-            nff.fornecedorS = fornecedor;
-            nff.totalItemS = quantVendida * precoUnit;
-            return nff;
-        }
 
         private void btnCliente_Click(object sender, EventArgs e)
         {
