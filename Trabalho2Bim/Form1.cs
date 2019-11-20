@@ -23,6 +23,7 @@ namespace Trabalho2Bim
 
         private void btnListar_Click(object sender, EventArgs e)
         {
+            arquivo.StartJson();
             dgNf.DataSource = null;
             dgNf.DataSource = arquivo.listachamar().OrderBy(x => x.numNfS).ToList();
             dgNf.ReadOnly = true;
@@ -40,9 +41,13 @@ namespace Trabalho2Bim
         {
             preencherControl outraBosta = new preencherControl();
             arquivo.salvarlista(outraBosta.preencherControle(txtNomeProd.Text, cbxCliente.Text, cbxVendedor.Text, cbxRegiao.Text, cbxFornecedor.Text, Convert.ToInt32(txtNumNota.Text), Convert.ToInt32(txtQuantidade.Text), Convert.ToDouble(txtPreco.Text)));
+            Salvar();
         }
 
-
+        private void Salvar()
+        {
+            new jSon().SalvarArquivoJson(arquivo.listachamar());
+        }
 
         private void btnCliente_Click(object sender, EventArgs e)
         {

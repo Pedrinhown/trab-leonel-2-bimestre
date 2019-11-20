@@ -21,6 +21,7 @@ namespace Trabalho2Bim
             nff.regiaoS = regiao;
             nff.fornecedorS = fornecedor;
             nff.totalItemS = quantVendida * precoUnit;
+
             return nff;
         }
     }

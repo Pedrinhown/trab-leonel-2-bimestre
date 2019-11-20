@@ -60,3 +60,17 @@ C:\Users\pedri\OneDrive - Complexo de Ensino Superior do Brasil LTDA\FACULDADE\2
 C:\Users\pedri\OneDrive - Complexo de Ensino Superior do Brasil LTDA\FACULDADE\2019 SEMESTRE - 2\Programação de Computadores\trab-leonel-2-bimestre\Trabalho2Bim\obj\Debug\Trabalho2Bim.csproj.CopyComplete
 C:\Users\pedri\OneDrive - Complexo de Ensino Superior do Brasil LTDA\FACULDADE\2019 SEMESTRE - 2\Programação de Computadores\trab-leonel-2-bimestre\Trabalho2Bim\obj\Debug\Trabalho2Bim.exe
 C:\Users\pedri\OneDrive - Complexo de Ensino Superior do Brasil LTDA\FACULDADE\2019 SEMESTRE - 2\Programação de Computadores\trab-leonel-2-bimestre\Trabalho2Bim\obj\Debug\Trabalho2Bim.pdb
+C:\Users\pedro\OneDrive - Complexo de Ensino Superior do Brasil LTDA\Programacao\Avaliações\2Bim\trab-leonel-2-bimestre\Trabalho2Bim\bin\Debug\Trabalho2Bim.exe.config
+C:\Users\pedro\OneDrive - Complexo de Ensino Superior do Brasil LTDA\Programacao\Avaliações\2Bim\trab-leonel-2-bimestre\Trabalho2Bim\bin\Debug\Trabalho2Bim.exe
+C:\Users\pedro\OneDrive - Complexo de Ensino Superior do Brasil LTDA\Programacao\Avaliações\2Bim\trab-leonel-2-bimestre\Trabalho2Bim\bin\Debug\Trabalho2Bim.pdb
+C:\Users\pedro\OneDrive - Complexo de Ensino Superior do Brasil LTDA\Programacao\Avaliações\2Bim\trab-leonel-2-bimestre\Trabalho2Bim\bin\Debug\Newtonsoft.Json.dll
+C:\Users\pedro\OneDrive - Complexo de Ensino Superior do Brasil LTDA\Programacao\Avaliações\2Bim\trab-leonel-2-bimestre\Trabalho2Bim\bin\Debug\Newtonsoft.Json.xml
+C:\Users\pedro\OneDrive - Complexo de Ensino Superior do Brasil LTDA\Programacao\Avaliações\2Bim\trab-leonel-2-bimestre\Trabalho2Bim\obj\Debug\Trabalho2Bim.Form1.resources
+C:\Users\pedro\OneDrive - Complexo de Ensino Superior do Brasil LTDA\Programacao\Avaliações\2Bim\trab-leonel-2-bimestre\Trabalho2Bim\obj\Debug\Trabalho2Bim.printCliente.resources
+C:\Users\pedro\OneDrive - Complexo de Ensino Superior do Brasil LTDA\Programacao\Avaliações\2Bim\trab-leonel-2-bimestre\Trabalho2Bim\obj\Debug\Trabalho2Bim.printVendedor.resources
+C:\Users\pedro\OneDrive - Complexo de Ensino Superior do Brasil LTDA\Programacao\Avaliações\2Bim\trab-leonel-2-bimestre\Trabalho2Bim\obj\Debug\Trabalho2Bim.Properties.Resources.resources
+C:\Users\pedro\OneDrive - Complexo de Ensino Superior do Brasil LTDA\Programacao\Avaliações\2Bim\trab-leonel-2-bimestre\Trabalho2Bim\obj\Debug\Trabalho2Bim.csproj.GenerateResource.cache
+C:\Users\pedro\OneDrive - Complexo de Ensino Superior do Brasil LTDA\Programacao\Avaliações\2Bim\trab-leonel-2-bimestre\Trabalho2Bim\obj\Debug\Trabalho2Bim.csproj.CoreCompileInputs.cache
+C:\Users\pedro\OneDrive - Complexo de Ensino Superior do Brasil LTDA\Programacao\Avaliações\2Bim\trab-leonel-2-bimestre\Trabalho2Bim\obj\Debug\Trabalho2Bim.csproj.CopyComplete
+C:\Users\pedro\OneDrive - Complexo de Ensino Superior do Brasil LTDA\Programacao\Avaliações\2Bim\trab-leonel-2-bimestre\Trabalho2Bim\obj\Debug\Trabalho2Bim.exe
+C:\Users\pedro\OneDrive - Complexo de Ensino Superior do Brasil LTDA\Programacao\Avaliações\2Bim\trab-leonel-2-bimestre\Trabalho2Bim\obj\Debug\Trabalho2Bim.pdb

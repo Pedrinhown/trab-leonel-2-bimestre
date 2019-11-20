@@ -20,6 +20,12 @@ namespace Trabalho2Bim {
             return listageral;
         }
 
+        public void StartJson()
+        {
+            listageral = (new jSon().LerArquivoJson());
+        }
+
+
         //public void SalvarFuncionario(List<Funcionario> listaFuncionario) {
 
         //    string json = JsonConvert.SerializeObject(listaFuncionario.ToArray());
